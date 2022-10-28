@@ -9,34 +9,31 @@
 ## ThunderBolts
 
 ## Integrantes: 
-- <a href="https://github.com/Xandebrabe">Alan Rozensztajn Schipper</a>
-- <a href="https://github.com/brun0meira">Daniel Quintão Davila</a> 
-- <a href="https://github.com/HallZero">Gustavo Monteiro</a>
-- <a href="https://github.com/gaebizinha">Igor Scapin Francisco Garcia</a>
-- <a href="https://github.com/joaoalca">Jean Lucas Rothstein Machado</a>
+- <a href="https://github.com/MrSchipRozen">Alan Rozensztajn Schipper</a>
+- <a href="https://github.com/danielquintaos">Daniel Quintão Davila</a> 
+- <a href="https://github.com/GustMont">Gustavo Monteiro</a>
+- <a href="https://github.com/IgorSFG">Igor Scapin Francisco Garcia</a>
+- <a href="https://github.com/jeanroths">Jean Lucas Rothstein Machado</a>
 - <a href="https://github.com/mariana2903">Mariana Silva de Paula </a> 
 - <a href="https://github.com/sofipimazzoni">Sofia Moreiras Pimazzoni</a> 
 
 ## 📝 Descrição
-A Everymind é uma empresa certificada SalesForce que está preocupada com sua alta taxa de Turnover e possui dificuldades em analisar os motivos responsáveis pela alta rotatividade. Neste contexto, a empresa forneceu dados referentes aos colaboradores (salário, cargo, data de entrada/saída, etc.) para que possamos desenvolver um modelo preditivo de classificação capaz de identificar quais funcionários têm tendências a sair ou permanecer no trabalho.
- A solução proposta deverá ser usada como complementação do sistema atual pelo setor de RH, facilitando o processo, e como uma ferramenta de análise que possibilite a identificação de eventuais fatores que contribuem para uma demissão a fim de diagnosticá-los e contribuir para a tomada da melhor decisão possível. Consequentemente, isso será benéfico para a Everymind pois é melhor para uma empresa manter os funcionários a longo prazo. Dessa forma, serão usados dois critérios: a taxa de precisão do algoritmo e a taxa de Turnover da empresa para avaliar o desempenho da solução.
+A Beacon School é uma escola com o diferencial de oferecer um ensino bilíngue do inglês, atendendo desde a Educação Infantil até o Ensino Médio. A problemática é dada pela dificuldade em administrar os equipamentos tecnológicos emprestados aos alunos, professores e colaboradores da escola, de forma que traz a perda de investimentos financeiros da instituição e riscos à segurança dos dados e informação. Nesse contexto, os alunos apresentam grande parte da responsabilidade da perda dos dispositivos, pois eles os pegam emprestados e acabam esquecendo-se de devolvê-los, deixando-os espalhados pela escola nos pátios, salas, corredores e outros locais, dificultando a localização e a devolução para o armazenamento da equipe de TI. Além disso, é possível que alguns equipamentos tenham deixado o perímetro escolar sem que tenha tido uma autorização prévia.
+
 
 
 ## 📁 Estrutura de pastas
 
 
 |--> Documentação<br>
-  &emsp;| antigos<br>
-  &emsp;| outros<br>
-  &emsp;| T2_G1_V5.0_Predictive_Model_Document.pdf<br>
-  &emsp;| T2_G1_V5.0_Predictive_Model_Document.docx<br>
   &emsp;|--> Versões anteriores<br>
     &emsp;&emsp;|--> Apresentações<br>
     &emsp;&emsp;|--> Documentação<br>
-|--> Notebook<br>
-  &emsp;|--> outros<br>
-  &emsp;|--> T2_G1_V5.0_Predictive_Model_Development.ipynb<br>
-  &emsp;|--> T2_G1_V5.0_Predictive_Model_Development.py<br>
+|--> Imagens<br>
+|--> src<br>
+  &emsp;|--> Back-end<br>
+  &emsp;|--> Circuito<br>
+  &emsp;|--> Front-end<br>
 | readme.md<br>
 | liscense.txt<br>
 
