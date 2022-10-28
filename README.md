@@ -43,7 +43,11 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-- <b>documentos</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>Versões anteriores</b> onde estão presentes as antigas versões do documento final.
+- <b>Documentação</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>Versões anteriores</b> onde estão presentes as antigas versões das apresentações e do documento final.
+
+- <b>Imagens</b>: aqui estão todas as imagens relevantes e frequentemente usadas no projeto
+
+- <b>src</b>: aqui esta toda a parte de código presente no projeto
 
 
 ## 💻 Execução dos projetos
