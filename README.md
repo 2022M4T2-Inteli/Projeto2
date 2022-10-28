@@ -59,29 +59,22 @@ Para replicação (reexecução dos códigos), o botão `Open in Colab` disponí
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 06/10/2022 
-    * Conclusão da inteligência artificial
-    * Conclusão do documento
-    * Apresentação final para o cliente
+* 0.2.1 - 16/12/2022 
+ 
     
-* 0.2.0 - 23/09/2022 
-    * Comparação dos modelos
-    * Atualizar a documentação
-
-* 0.1.1 - 08/09/2022 
-    * Definir os modelos de avaliação
-    * Atualizar a documentação
+* 0.2.0 - 02/12/2022 
 
 
-* 0.1.0 - 25/08/2022
-    * Personas
-    * Jornada do usuário
-    * Feature Engineering
-    * Atualizar a documentação
+* 0.1.1 - 18/11/2022 
 
-* 0.0.1 - 12/08/2022
+
+* 0.1.0 - 04/11/2022
+   
+
+* 0.0.1 - 21/10/2022
     * Entendimento do negócio
     * Entendiemnto dos dados
+    * Arquitetura da solução
 
 
 
@@ -93,11 +86,4 @@ Para replicação (reexecução dos códigos), o botão `Open in Colab` disponí
 
 Aqui estão as referências usadas no projeto:
 
-1. <https://creativecommons.org/share-your-work/>
-2. <https://jupyter.org>
-3. <https://colab.research.google.com>
-4. <https://www.google.com/sheets/about/>
-5. <https://www.canva.com>
-6. <http://public.dhe.ibm.com/software/analytics/spss/documentation/modeler/14.2/en/CRISP_DM.pdf>
-7. <https://integrada.minhabiblioteca.com.br/books/9788521637509>
-8. <https://integrada.minhabiblioteca.com.br/books/9788595155473>
+1. 
