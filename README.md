@@ -45,7 +45,6 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>documentos</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>Versões anteriores</b> onde estão presentes as antigas versões do documento final.
 
-- <b>notebooks</b>: todos os Jupyter Notebooks criados na plataforma Colab para desenvolvimento do projeto.
 
 ## 💻 Execução dos projetos
 
@@ -77,7 +76,7 @@ Para replicação (reexecução dos códigos), o botão `Open in Colab` disponí
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">Turnover de funcionários</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, <a href="https://github.com/Xandebrabe">Alexandre Fonseca de Souza</a>, <a href="https://github.com/brun0meira">Bruno Otavio Bezerra de Meira</a> , <a href="https://github.com/HallZero">Filipi Enzo Siqueira Kikuchi</a>, <a href="https://github.com/gaebizinha">Gabriela de Morais da Silva</a>, <a href="https://github.com/joaoalca">João Pedro Sartori Garcia de Alcaraz</a>, <a href="https://github.com/lucasconti888">Lucas Conti Pereira</a> , <a href="https://github.com/sofipimazzoni">Sofia Moreiras Pimazzoni</a> </a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">Turnover de funcionários</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, <a href="https://github.com/MrSchipRozen">Alan Rozensztajn Schipper</a>, <a href="https://github.com/danielquintaos">Daniel Quintão Davila</a>, <a href="https://github.com/GustMont">Gustavo Monteiro</a>, <a href="https://github.com/IgorSFG">Igor Scapin Francisco Garcia</a>, <a href="https://github.com/jeanroths">Jean Lucas Rothstein Machado</a>, <a href="https://github.com/mariana2903">Mariana Silva de Paula </a>, <a href="https://github.com/sofipimazzoni">Sofia Moreiras Pimazzoni</a> </a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 ## 🎓 Referências
 
