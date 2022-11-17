@@ -257,12 +257,12 @@
     font-size: 13px;
 }
 
-
 .radio{
     margin-left: 26%;
     margin-top: 20px;
 }
 
+<<<<<<< Updated upstream
 
 /* página de login */
 .login_Intro{
@@ -409,3 +409,67 @@ img{
     padding: 0.2em;
     display: block;
 }
+=======
+.radios{
+    margin-top: 19px;
+    margin-left: 18px;
+}
+
+.map_text{
+    font-weight: bold;
+    margin-left: 28%;
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.map{
+    margin-left: 26%;
+    max-width: 1100px;
+    max-height: 550px;
+    margin-top: 30px;
+}
+
+/* Página ambientes específicos */
+
+.specific_room{
+    font-weight: bold;
+    margin-left: 26%;
+    margin-top: 120px;
+}
+
+.equipaments_specific_number{
+    margin-top: 120px;
+}
+
+.info_room_group{
+    flex-direction: row;
+    margin-left: 26%;
+    justify-content: space-between;
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+
+.equipament_card_room{
+    /* margin-left: 26%; */
+    width: 340px;
+    height: 100px;
+    background-color: #F5F9FD;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    flex-direction: column; 
+    padding: 10px;
+}
+
+.info_card_group{
+    margin-left: 31%;
+}
+
+.rooms_1{
+    margin-right: 18%;
+}
+/* .equipament_card_room_group{
+    flex-direction: row;
+} */
+>>>>>>> Stashed changes
