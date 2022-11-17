@@ -262,3 +262,150 @@
     margin-left: 26%;
     margin-top: 20px;
 }
+
+
+/* página de login */
+.login_Intro{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#foto{
+    width: 90%;
+}
+
+.loginAdm{
+    height: 100vh;
+    background-color: #126a7b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_container{
+    min-height: 600px;
+    width: 500px;
+    background-color: white;
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.login_container_img{
+    min-height: 600px;
+    width: 500px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.copyright{
+    display: flex !important;
+    text-align: left !important;
+    padding-top: 130px;
+    
+}
+
+img{
+    padding-top: 50px;
+    width: 450px;
+}
+
+.login_title{
+    margin-bottom: 32px;
+    color: #303030;
+}
+
+.login_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_input{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+
+.login_input-border{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #cfcfcf;
+    transition: .3s ease-in-out;
+}
+
+.login_input-border::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: #169def;
+    transition: .3s ease-in-out;
+}
+
+
+.login_input:focus + .login_input-border::after{
+    width: 100%;
+}
+
+.login_submit{
+    height: 48px;
+    width: 100%;
+    padding-left: 8px;
+    outline: none;
+    position: relative;
+    background: #d94431;
+    color: white;
+    background-size: 200%;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.login_submit:hover{
+    background-position: right;
+}
+
+.login_reset{
+    font-size: 12px;
+    color: #929292;
+    text-decoration: none;
+}
+
+.campo{
+    margin-bottom: 1.5rem;
+}
+
+.campo label{
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.campo input[type="text"], .campo input[type="email"]{
+    padding: 0.2em;
+    display: block;
+}
