@@ -83,4 +83,14 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 Aqui estão as referências usadas no projeto:
 
-1. 
+•SILVA, A. A. et al: A Utilização da Matriz Swot como Ferramenta Estratégica -um Estudo de Caso em uma Escola de Idioma de São Paulo. VIII Simpósio de Excelência em Gestão e Tecnologia, 2011;
+
+•DANCA, A. C.: SWOT Analysis. University of St. Francis, 2013;
+
+•MASCHIETTO, L. G. et al: Arquitetura e infraestrutura de IoT. SAGAH, 2021;
+
+•OLIVEIRA, A. F.: Localização 3d Em Ambientes Internos Com Redes Bluetooth Low Energy Utilizando Técnicas De Aprendizado De Máquina. Unesp - Instituto de Ciência e Tecnologia de Sorocaba, 2021;
+
+•FIORINI, M.: Uma Arquitetura Genérica De Software Para Disponibilização De Uma Aplicação Web Para Dispositivos Móveis. Universidade Federal de Santa Catarina, 2006;
+
+•NAKATA, G.: [Hands On] – Arduino UNO + Arduino Mega - Protocolo I2C. UDESC, Núcleo Estudantil de Inovação Tecnológica, 2018;
