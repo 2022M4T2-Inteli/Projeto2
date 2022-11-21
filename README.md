@@ -63,15 +63,20 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 
 * 0.1.1 - 18/11/2022 
-
+    * Sistema com RFID integrado com front(basico);
+    * 
 
 * 0.1.0 - 04/11/2022
-   
+    * Atualização da aqruitetura da solução;
+    * Sistema com RFID;
+    * Código do sistema com RFID;
+    * Figma do frontend;
+    * Tabela de conexões.
 
 * 0.0.1 - 21/10/2022
-    * Entendimento do negócio
-    * Entendiemnto dos dados
-    * Arquitetura da solução
+    * Entendimento do negócio;
+    * Entendiemnto dos dados;
+    * Arquitetura da solução.
 
 
 
