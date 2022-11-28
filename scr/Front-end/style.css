@@ -584,3 +584,10 @@ h1{
     width: 90%;
 
 }
+
+/* Outros */
+
+.menu_give_button{
+    text-decoration: none;
+    color: black;
+}
