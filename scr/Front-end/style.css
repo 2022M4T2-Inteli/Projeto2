@@ -164,7 +164,7 @@ body {
     margin-bottom: 40px;
 }
 
-.bi{
+.bi1{
    margin-top: 7.5px;
    margin-right: 15px;
 }
@@ -483,6 +483,10 @@ h1{
     padding-bottom: 20px;
     text-align: center;
     font-weight: bold;
+}
+
+.bi2{
+    margin: 0;
 }
 
 
