@@ -60,7 +60,8 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
  
     
 * 0.2.0 - 02/12/2022 
-
+    * Sistema de varredura de Access-Points a partir do bloco central;
+    * Lógica inicial algorítimica de posicionamento;
 
 * 0.1.1 - 18/11/2022 
     * Sistema com RFID integrado com front(basico);
