@@ -31,88 +31,81 @@ router.post("/", async (req, res) => {
 });
 
 // //Read - leitura de dados
-router.get('/', async (req, res) => {
-    try{
-        const getAll = await RFID.find();
+router.get("/", async (req, res) => {
+  try {
+    const getAll = await RFID.find();
 
-        res.status(200).json(getAll)
-    } catch (error) {
-        res.status(500).json({ error: error })
+    res.status(200).json(getAll);
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  //extrair o dado da requisição, pela url = req.params
+  const id = req.params.id;
+
+  try {
+    const getOne = await RFID.findOne({ _id: id });
+
+    if (!getOne) {
+      res.status(422).json({ message: "O ativo não foi encontrado" });
+      return;
     }
-})
 
-router.get('/:id', async (req, res) => {
- //extrair o dado da requisição, pela url = req.params
- const id = req.params.id
-
- try{
-    const getOne = await RFID.findOne({ _id: id })
-
-    if(!getOne){
-        res.status(422).json({message: 'O ativo não foi encontrado'})
-        return
-    }
-
-    res.status(200).json(getOne)
-
-    } catch (error){
-        res.status(500).json({ error: error})
-    }
-})
+    res.status(200).json(getOne);
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
 
 //update - atualização de dados (PUT, PATCH)
-router.patch('/:id', async (req, res) => {
+router.patch("/:id", async (req, res) => {
+  const id = req.params.id;
 
-    const id = req.params.id
+  const { Modelo, NumeroP, Localizacao } = req.body;
 
-    const{ Modelo, NumeroP, Localizacao } = req.body
+  const updateOne = {
+    Modelo,
+    NumeroP,
+    Localizacao,
+  };
 
-    const updateOne = {
-        Modelo,
-        NumeroP,
-        Localizacao,
+  try {
+    const updateRFID = await RFID.updateOne({ _id: id }, updateOne);
+
+    console.log(updateRFID);
+
+    if (updateRFID.matchedCount === 0) {
+      res.status(422).json({ message: "O ativo não foi encontrado" });
+      return;
     }
 
-    try {
-
-        const updateRFID = await RFID.updateOne({_id: id}, updateOne)
-
-        console.log(updateRFID)
-
-        if (updateRFID.matchedCount === 0){
-            res.status(422).json({message: 'O ativo não foi encontrado'})
-            return
-        }
-
-        res.status(200).json(updateOne)
-
-    }  catch(error) {
-        res.status(500).json({ error: error})
-    }
-
-})
+    res.status(200).json(updateOne);
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
 
 // Delete - deletar dados
-    router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
+  const id = req.params.id;
 
-        const id = req.params.id
+  const device = await RFID.findOne({ _id: id })
 
-        const deleteOne = await RFID.deleteOne({ _id: id })
+  
+  try {
+    await RFID.deleteOne({ _id: id });
+      
+    if (!device) {
+        res.status(422).json({ message: "O ativo não foi encontrado" });
+        return;
+    }
 
-        if(!deleteOne){
-            res.status(422).json({message: 'O ativo não foi encontrado'})
-            return
-        }
-
-        try{
-
-            await RFID.deleteOne({ _id: id})
-
-            res.status(200).json({message: 'Ativo removido com sucesso'})
-
-        }catch(error){
-            res.status(500).json({ error: error})
-        }
-    })
+    res.status(200).json({ message: "Ativo removido com sucesso" });
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
 
 module.exports = router;
