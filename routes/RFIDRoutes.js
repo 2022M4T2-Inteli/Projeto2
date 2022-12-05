@@ -92,27 +92,27 @@ router.patch('/:id', async (req, res) => {
 
 })
 
-// // Delete - deletar dados
-//     router.delete('/:id', async (req, res) => {
+// Delete - deletar dados
+    router.delete('/:id', async (req, res) => {
 
-//         const id = req.params.id
+        const id = req.params.id
 
-//         const aparelhos = await Beacon.findOne({ _id: id })
+        const deleteOne = await RFID.deleteOne({ _id: id })
 
-//         if(!aparelhos){
-//             res.status(422).json({message: 'O usuário não foi encontrado'})
-//             return
-//         }
+        if(!deleteOne){
+            res.status(422).json({message: 'O ativo não foi encontrado'})
+            return
+        }
 
-//         try{
+        try{
 
-//             await Beacon.deleteOne({ _id: id})
+            await RFID.deleteOne({ _id: id})
 
-//             res.status(200).json({message: 'Usuário removido com sucesso'})
+            res.status(200).json({message: 'Ativo removido com sucesso'})
 
-//         }catch(error){
-//             res.status(500).json({ error: error})
-//         }
-//     })
+        }catch(error){
+            res.status(500).json({ error: error})
+        }
+    })
 
 module.exports = router;
