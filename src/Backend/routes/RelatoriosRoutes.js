@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         //criando dados
         await Relatorios.create(postOne)
 
-        res.status(201).json({message: 'inserido no sistema com sucesso'})
+        res.status(201).json({message: 'aparelho inserido no sistema com sucesso'})
 
     } catch (error) {
         res.status(500).json({error: error})
