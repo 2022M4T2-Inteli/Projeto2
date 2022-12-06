@@ -91,13 +91,13 @@ router.patch("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   const id = req.params.id;
 
-  const device = await RFID.findOne({ _id: id })
+  const deleteOne = await RFID.findOne({ _id: id })
 
   
   try {
     await RFID.deleteOne({ _id: id });
       
-    if (!device) {
+    if (!deleteOne) {
         res.status(422).json({ message: "O ativo não foi encontrado" });
         return;
     }
