@@ -9,12 +9,12 @@ router.post('/', async (req, res) => {
     //{ID: 20939, Mes: "agosto", DispositivosEmprestados: 14, DispositosPerdidos: 5}
     const{ ID, Mes, DispositivosEmprestados, DispositosPerdidos } = req.body
 
-    if(!IDA){
+    if(!ID){
         res.status(422).json({ error: 'o ID é obrigatório!'})
         return
     }
 
-    const postOne = {
+    const postone = {
       ID,
       Mes,
       DispositivosEmprestados,
@@ -24,9 +24,9 @@ router.post('/', async (req, res) => {
     try {
 
         //criando dados
-        await Relatorios.create(postOne)
+        await Relatorios.create(postone)
 
-        res.status(201).json({message: 'inserido no sistema com sucesso'})
+        res.status(201).json({message: 'Mes inserido no sistema com sucesso'})
 
     } catch (error) {
         res.status(500).json({error: error})
@@ -34,35 +34,35 @@ router.post('/', async (req, res) => {
 
 })
 
-// //Read - leitura de dados
-// router.get('/', async (req, res) => {
-//     try{
-//         const beacons = await Beacon.find()
+//Read - leitura de dados
+router.get('/', async (req, res) => {
+    try{
+        const getall = await Relatorios.find()
 
-//         res.status(200).json(beacons)
-//     } catch (error) {
-//         res.status(500).json({ error: error })
-//     }
-// })
+        res.status(200).json(getall)
+    } catch (error) {
+        res.status(500).json({ error: error })
+    }
+})
 
-// router.get('/:id', async (req, res) => {
-//  //extrair o dado da requisição, pela url = req.params
-//  const id = req.params.id 
+router.get('/:id', async (req, res) => {
+ //extrair o dado da requisição, pela url = req.params
+ const id = req.params.id 
 
-//  try{
-//     const aparelhos = await Beacon.findOne({ _id: id })
+ try{
+    const getOne = await Relatorios.findOne({ _id: id })
 
-//     if(!aparelhos){
-//         res.status(422).json({message: 'O usuário não foi encontrado'})
-//         return
-//     }
+    if(!getOne){
+        res.status(422).json({message: 'O mes não foi encontrado'})
+        return
+    }
 
-//     res.status(200).json(aparelhos)
+    res.status(200).json(getOne)
 
-//     } catch (error){
-//         res.status(500).json({ error: error})
-//     }
-// })
+    } catch (error){
+        res.status(500).json({ error: error})
+    }
+})
 
 // //update - atualização de dados (PUT, PATCH)
 // router.patch('/:id', async (req, res) => {
@@ -120,4 +120,4 @@ router.post('/', async (req, res) => {
 //         }
 //     })
 
-//     module.exports = router 
+    module.exports = router 
