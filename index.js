@@ -17,10 +17,12 @@ app.use(express.json());
 const aparelhosRoutes = require("./routes/aparelhosRoutes");
 const RFIDRoutes = require("./routes/RFIDRoutes");
 const EletronicosRoutes = require("./routes/EletronicosRoutes");
+const RelatoriosRoutes = require("./routes/RelatoriosRoutes");
 
 app.use("/aparelhos", aparelhosRoutes);
 app.use("/RFID", RFIDRoutes);
 app.use("/Eletronicos", EletronicosRoutes);
+app.use("/Relatorios", RelatoriosRoutes);
 
 //rota inicial / endpoint
 app.get("/", (req, res) => {
