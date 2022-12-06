@@ -26,9 +26,9 @@ A Beacon School é uma escola com o diferencial de oferecer um ensino bilíngue 
 
 
 |--> Documentos<br>
-  &emsp;|--> Versões anteriores<br>
   &emsp;|--> Apresentações<br>
   &emsp;|--> Documentação<br>
+  &emsp;|--> Versões anteriores<br>
 |--> Imagens<br>
 |--> src<br>
   &emsp;|--> Back-end<br>
