@@ -45,24 +45,24 @@ router.get('/', async (req, res) => {
     }
 })
 
-// router.get('/:id', async (req, res) => {
-//  //extrair o dado da requisição, pela url = req.params
-//  const id = req.params.id 
+router.get('/:id', async (req, res) => {
+ //extrair o dado da requisição, pela url = req.params
+ const id = req.params.id 
 
-//  try{
-//     const getOne = await Relatorios.findOne({ _id: id })
+ try{
+    const getOne = await Relatorios.findOne({ _id: id })
 
-//     if(!getOne){
-//         res.status(422).json({message: 'O mes não foi encontrado'})
-//         return
-//     }
+    if(!getOne){
+        res.status(422).json({message: 'O mes não foi encontrado'})
+        return
+    }
 
-//     res.status(200).json(getOne)
+    res.status(200).json(getOne)
 
-//     } catch (error){
-//         res.status(500).json({ error: error})
-//     }
-// })
+    } catch (error){
+        res.status(500).json({ error: error})
+    }
+})
 
 // //update - atualização de dados (PUT, PATCH)
 // router.patch('/:id', async (req, res) => {
