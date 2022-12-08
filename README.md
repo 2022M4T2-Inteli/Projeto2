@@ -25,10 +25,10 @@ A Beacon School é uma escola com o diferencial de oferecer um ensino bilíngue 
 ## 📁 Estrutura de pastas
 
 
-|--> Documentos<br>
-  &emsp;|--> Apresentações<br>
-  &emsp;|--> Documentação<br>
+|--> Documentação<br>
   &emsp;|--> Versões anteriores<br>
+    &emsp;&emsp;|--> Apresentações<br>
+    &emsp;&emsp;|--> Documentação<br>
 |--> Imagens<br>
 |--> src<br>
   &emsp;|--> Back-end<br>
@@ -60,15 +60,14 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
  
     
 * 0.2.0 - 02/12/2022 
-    * Sistema de varredura de Access-Points a partir do bloco central;
-    * Lógica inicial de posicionamento;
+
 
 * 0.1.1 - 18/11/2022 
     * Sistema com RFID integrado com front(basico);
-    * Conexão entre dois microcontrolados (ESP32 S3) por FTM
+    * 
 
 * 0.1.0 - 04/11/2022
-    * Atualização da arquitetura da solução;
+    * Atualização da aqruitetura da solução;
     * Sistema com RFID;
     * Código do sistema com RFID;
     * Figma do frontend;
