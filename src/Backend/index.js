@@ -14,15 +14,15 @@ app.use(
 
 app.use(express.json());
 
-//rotas da API
-const aparelhosRoutes = require("./routes/aparelhosRoutes");
+//rotas da API 
+const aparelhosRoutes = require("./routes/aparelhosRoutes"); 
 const RFIDRoutes = require("./routes/RFIDRoutes");
 const EletronicosRoutes = require("./routes/EletronicosRoutes");
 const RelatoriosRoutes = require("./routes/RelatoriosRoutes");
 
-app.use("/aparelhos", aparelhosRoutes);
-app.use("/RFID", RFIDRoutes);
-app.use("/Eletronicos", EletronicosRoutes);
+app.use("/aparelhos", aparelhosRoutes); //Rota dos aparelhos
+app.use("/RFID", RFIDRoutes); //Rota dos RFID
+app.use("/Eletronicos", EletronicosRoutes); 
 app.use("/Relatorios", RelatoriosRoutes);
 
 //rota inicial / endpoint
