@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = 5500;
-const hostname = "127.0.0.1";
+const hostname = "10.128.0.155";
 
 // forma de ler JSON / middlewares
 app.use(
