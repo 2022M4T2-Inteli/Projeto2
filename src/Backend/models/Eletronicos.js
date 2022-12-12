@@ -6,7 +6,8 @@ const Eletronicos = mongoose.model('Eletronicos', {
     NumeroSerie: Number,
     Modelo: String,
     Cor: String,
-    Localizacao: String,
+    LocalizacaoX: String,
+    LocalizacaoY: String,
 
 })
 
