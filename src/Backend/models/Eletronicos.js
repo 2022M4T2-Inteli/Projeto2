@@ -6,8 +6,8 @@ const Eletronicos = mongoose.model('Eletronicos', {
     NumeroSerie: Number,
     Modelo: String,
     Cor: String,
-    LocalizacaoX: Number,
-    LocalizacaoY: Number,
+    Localizacao: String,
+
 })
 
 module.exports = Eletronicos

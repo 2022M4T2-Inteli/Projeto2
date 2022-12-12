@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     //req.body
 
     //{ID: "0687689", NumeroPatrimonio: 77633, Modelo = apple, Cor: prata, Localizacao: sala 5}
-    const{ IDEletronico, NumeroPatrimonio, NumeroSerie, Modelo, Cor, LocalizacaoX, LocalizacaoY} = req.body
+    const{ IDEletronico, NumeroPatrimonio, NumeroSerie, Modelo, Cor, Localizacao} = req.body
 
     if(!IDEletronico){
         res.status(422).json({ error: 'o ID é obrigatório!'})
@@ -20,8 +20,7 @@ router.post('/', async (req, res) => {
       NumeroSerie,
       Modelo,
       Cor,
-      LocalizacaoX,
-      LocalizacaoY,
+      Localizacao
     }
 
     try {
