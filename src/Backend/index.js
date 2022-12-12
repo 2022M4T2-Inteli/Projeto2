@@ -20,10 +20,16 @@ const RFIDRoutes = require("./routes/RFIDRoutes");
 const EletronicosRoutes = require("./routes/EletronicosRoutes");
 const RelatoriosRoutes = require("./routes/RelatoriosRoutes");
 
+const RoutesFront = require("./routes/RoutesFront");
+
 app.use("/aparelhos", aparelhosRoutes);
 app.use("/RFID", RFIDRoutes);
 app.use("/Eletronicos", EletronicosRoutes);
 app.use("/Relatorios", RelatoriosRoutes);
+
+app.use(express.static("../Front-end"));
+const RouterFront = require('./routes/routesFront.js');
+app.use('/', RouterFront);
 
 //rota inicial / endpoint
 app.get("/", (req, res) => {

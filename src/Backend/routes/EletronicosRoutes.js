@@ -72,7 +72,7 @@ router.patch('/:id', async (req, res) => {
 
     const id = req.params.id
 
-    const{ IDEletronico, NumeroPatrimonio, NumeroSerie, Modelo, Cor, Localizacao} = req.body
+    const{ IDEletronico, NumeroPatrimonio, NumeroSerie, Modelo, Cor, LocalizacaoX, LocalizacaoY} = req.body
 
     const UpdateOne = {
       IDEletronico,
@@ -80,7 +80,8 @@ router.patch('/:id', async (req, res) => {
       NumeroSerie,
       Modelo,
       Cor,
-      Localizacao,
+      LocalizacaoX,
+      LocalizacaoY
     }
 
     try {
