@@ -29,6 +29,7 @@ app.use("/Relatorios", RelatoriosRoutes);
 
 app.use(express.static("../Front-end"));
 const RouterFront = require('./routes/routesFront.js');
+const { response } = require("express");
 app.use('/', RouterFront);
 
 //rota inicial / endpoint
@@ -39,24 +40,19 @@ app.get("/", (req, res) => {
   res.json({ message: "oi express!" });
 });
 
+var content = ".";
+app.post('/Equipamentos/buzina', (req, res)=>{
+  var response = {
+    buz:Number(req.body.buzina),
+    id:Number(req.body.id)
+  }
 
-
-
-app.post('/buzina', (req, res)=>{
-  const buzina = req.body.buzina;
-  const id = req.params.id;
-
-  if(buzina == "1") res.send(buzina);
-  else if (buzina == "0") res.send(buzina);
-
-    console.log(buzina);
+  if(response.buzina == 1 || response.buzina == 0){
+    content = response;
+  }
+  res.send(JSON.stringify(content));
+  console.log(content);
 });
-
-
-
-
-
-
 
 require("dotenv").config();
 

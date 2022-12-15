@@ -57,9 +57,9 @@ function Buzinar(id){
       var currentvalue = document.getElementById('onoff').value;
       if(currentvalue == "off"){
         document.getElementById("onoff").value="On";
-        $.post("http://"+HOST+"/buzina", {buzina:"1", id:id}, ()=>{});
+        $.post("http://"+HOST+":"+PORT+"/Equipamentos/buzina", {buzina:1, id:id}, ()=>{});
       }else{
         document.getElementById("onoff").value="Off";
-        $.post("http://"+HOST+"/buzina", {buzina:"0", id:id}, ()=>{});
+        $.post("http://"+HOST+":"+PORT+"/Equipamentos/buzina", {buzina:0, id:id}, ()=>{});
       }
 }
