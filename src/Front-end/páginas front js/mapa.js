@@ -13,6 +13,7 @@ const getPositions = () => {
     }
     
     Img.terreo.src = "../assets/campus-terreo.jpg";
+    console.log("AAAAAAAAAAAAAAA");
     drawMap();
 
     var drawMap = ()=>{

@@ -1,6 +1,4 @@
 const router = require('express').Router();
-const bodyParser = require('body-parser');
-const urlencoder = bodyParser.urlencoded({extended:false});
 const path = require('path');
 
   router.get("/Equipamentos", (req, res) => {
@@ -42,20 +40,7 @@ const path = require('path');
 //     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/home2.html"));
 //   });
 
-router.param('id', function(req, res, next, id) {
-  req.id = id;
-  next();
-});
 
 
-router.post('/buzina/:id', urlencoder, (req, res)=>{
-  const id = req.params.id;
-  const buzina = req.body.buzina;
-
-  if(buzina == "1") res.send(buzina);
-  else if (buzina == "0") res.send(buzina);
-
-    console.log(buzina);
-});
 
 module.exports = router;

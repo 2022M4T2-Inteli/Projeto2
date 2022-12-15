@@ -39,6 +39,25 @@ app.get("/", (req, res) => {
   res.json({ message: "oi express!" });
 });
 
+
+
+
+app.post('/buzina', (req, res)=>{
+  const buzina = req.body.buzina;
+  const id = req.params.id;
+
+  if(buzina == "1") res.send(buzina);
+  else if (buzina == "0") res.send(buzina);
+
+    console.log(buzina);
+});
+
+
+
+
+
+
+
 require("dotenv").config();
 
 //entregar uma porta
