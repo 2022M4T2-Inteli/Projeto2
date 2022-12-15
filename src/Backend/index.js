@@ -2,7 +2,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = 5500;
+const HOST = "10.128.64.20"
+const PORT = "5500";
 
 // forma de ler JSON / middlewares
 app.use(
@@ -66,7 +67,7 @@ mongoose
   .then(() => {
     console.log("conectamos ao MongoDB!");
     app.listen(PORT, () => {
-      console.log(`App listening on http://localhost:${PORT}/`);
+      console.log(`App listening on http://${HOST}:${PORT}/`);
   })
 })
   .catch((err) => console.log(err));
