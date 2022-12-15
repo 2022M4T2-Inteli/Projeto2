@@ -4,6 +4,12 @@ const path = require('path');
   router.get("/Equipamentos", (req, res) => {
     res.sendFile(path.join(__dirname, "../../Front-end/equi_cadastrados.html"));
   });
+  router.get("/RFIDjs", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../Front-end/equi_emprestados.html"));
+  });
+  router.get("/Relatoriosjs", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../Front-end/relatorios.html"));
+  });
 
   router.get("/Mapa", (req, res) => {
     res.sendFile(path.join(__dirname, "../../Front-end/mapa.html"));
