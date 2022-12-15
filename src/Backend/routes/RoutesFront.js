@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 
-  router.get("/Eletronicosjs", (req, res) => {
+  router.get("/Equipamentos", (req, res) => {
     res.sendFile(path.join(__dirname, "../../Front-end/equi_cadastrados.html"));
   });
   router.get("/RFIDjs", (req, res) => {
@@ -10,6 +10,17 @@ const path = require('path');
   router.get("/Relatoriosjs", (req, res) => {
     res.sendFile(path.join(__dirname, "../../Front-end/relatorios.html"));
   });
+
+  router.get("/Mapa", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../Front-end/mapa.html"));
+  });
+
+//   router.get("/infoDevice", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/infoDevice.html"));
+//   });
+//   router.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/loginpage.html"));
+//   });
 //   router.get("/paginaInicial", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/home.html"));
 //   });
@@ -34,4 +45,8 @@ const path = require('path');
 //   router.get("/home2", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/home2.html"));
 //   });
+
+
+
+
 module.exports = router;

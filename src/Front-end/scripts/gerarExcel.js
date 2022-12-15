@@ -1,30 +1,22 @@
-const getData = [
-    {"ID": "1", "Modelo": "cell", "Localização": "sala"},
-    {"ID": "2", "Modelo": "pc", "Localização": "sala 1"}
-];
-
-
 function generateExcel(){
-    const id = document.getElementsByName("id").length;
+    const id = document.getElementsByClassName("id").length;
 
-    var data = '[';
+    var data = [['ID','Nr Patri','Nr Série','Modelo','Cor','Local']];
 
     for(var i=0; i<id; i++){
-        data += "{";
-        data += 'IDEletronico:'+String(document.getElementsByName("id")[i].value)+",";
-        data += 'NumeroPatrimonio:'+String(document.getElementsByName("nrPatri")[i].value)+",";
-        data += 'NumeroSerie:'+String(document.getElementsByName("nrSerie")[i].value)+",";
-        data += 'Modelo:'+String(document.getElementsByName("modelo")[i].value)+",";
-        data += 'Cor:'+String(document.getElementsByName("cor")[i].value)+",";
-        data += 'LocalizacaoX:'+String(document.getElementsByName("locX")[i].value)+",";
-        data += 'LocalizacaoY:'+String(document.getElementsByName("locY")[i].value)+",";
-        data += "},"
+        var content = [];
+        content.push(String(document.getElementsByClassName("id")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("nrPatri")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("nrSerie")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("modelo")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("cor")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("loc")[i].innerHTML));
+        data.push(content);
     }
-    data += ']';
     console.log(data);
-    data = JSON.parse(data);
-    const ws = XLSX.utils.json_to_sheet(data);
+    const ws = XLSX.utils.aoa_to_sheet(data);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Localização");
+    wb.SheetNames.push("Localização");
+    wb.Sheets["Localização"] = ws;
     XLSX.writeFile(wb, 'Relatório do Patrimônio.xlsx');
 }
