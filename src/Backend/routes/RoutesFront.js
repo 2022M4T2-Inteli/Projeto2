@@ -3,9 +3,14 @@ const bodyParser = require('body-parser');
 const urlencoder = bodyParser.urlencoded({extended:false});
 const path = require('path');
 
-  router.get("/Eletronicosjs", (req, res) => {
+  router.get("/Equipamentos", (req, res) => {
     res.sendFile(path.join(__dirname, "../../Front-end/equi_cadastrados.html"));
   });
+
+  router.get("/Mapa", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../Front-end/mapa.html"));
+  });
+
 //   router.get("/infoDevice", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/infoDevice.html"));
 //   });
@@ -37,12 +42,18 @@ const path = require('path');
 //     res.sendFile(path.join(__dirname, "../src/Frontend/paginas/home2.html"));
 //   });
 
-router.post('/buzina/:id', urlencoder, (req, res)=>{
-    const id = req.params.id;
-    const buzina = req.body.buzina;
+router.param('id', function(req, res, next, id) {
+  req.id = id;
+  next();
+});
 
-    if(buzina == "1") res.send(buzina);
-    else if (buzina == "0") res.send(buzina);
+
+router.post('/buzina/:id', urlencoder, (req, res)=>{
+  const id = req.params.id;
+  const buzina = req.body.buzina;
+
+  if(buzina == "1") res.send(buzina);
+  else if (buzina == "0") res.send(buzina);
 
     console.log(buzina);
 });
