@@ -14,9 +14,12 @@ tbodyEle.innerHTML = "";
         success: data => {
             data.forEach(element => {
                 getClass(element.LocalizacaoX, element.LocalizacaoY);
-                const button = `<button type="button" class="btn back_button">
-                                <a class="menu_give_button" id="onoff" value="off"
-                                onclick="Buzinar(${element.IDEletronico})">BUZINA</a></button>`;
+                const buttonOn = `<button type="button" class="btn back_button">
+                                <a class="menu_give_button" id="${element.IDEletronico}On"
+                                onclick="Buzinar('${element.IDEletronico}On', ${element.IDEletronico})">RASTREAR</a></button>`;
+                const buttonOff = `<button type="button" class="btn back_button">
+                                <a class="menu_give_button" id="${element.IDEletronico}Off"
+                                onclick="Buzinar('${element.IDEletronico}Off', ${element.IDEletronico})">DESRASTREAR</a></button>`;
                 
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
@@ -26,7 +29,8 @@ tbodyEle.innerHTML = "";
                 <td class="modelo">${element.Modelo}</td>
                 <td class="cor">${element.Cor}</td>
                 <td class="loc">${currentClass}</td>
-                <td>${button}</td>
+                <td>${buttonOn}</td>
+                <td>${buttonOff}</td>
                         `
                 tbodyEle.appendChild(tr);
 
@@ -53,13 +57,13 @@ const getClass = (posX, posY) => {
     }
 }
 
-function Buzinar(id){
-      var currentvalue = document.getElementById('onoff').value;
-      if(currentvalue == "off"){
-        document.getElementById("onoff").value="On";
-        $.post("http://"+HOST+":"+PORT+"/Equipamentos/buzina", {buzina:1, id:id}, ()=>{});
-      }else{
-        document.getElementById("onoff").value="Off";
-        $.post("http://"+HOST+":"+PORT+"/Equipamentos/buzina", {buzina:0, id:id}, ()=>{});
+function Buzinar(index, id){
+      var currentvalue = document.getElementById(index).innerHTML.toLocaleLowerCase();
+      console.log(currentvalue);
+      if(currentvalue == "rastrear"){
+        $.post("http://"+HOST+":"+PORT+"/buzina", {buzina:1, id:id}, ()=>{console.log("Mandou 1!")});
+      }
+      else if(currentvalue == "desrastrear"){
+        $.post("http://"+HOST+":"+PORT+"/buzina", {buzina:0, id:id}, ()=>{console.log("Mandou 0!")});
       }
 }

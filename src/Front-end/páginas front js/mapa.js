@@ -14,7 +14,13 @@ const getPositions = () => {
     
     Img.terreo.src = "../assets/campus-terreo.jpg";
     console.log("AAAAAAAAAAAAAAA");
-    drawMap();
+	
+    setInterval(()=>{
+		ctx.clearRect(0,0,Cwidht,Cheight);
+		drawMap();
+		for(let i in Player.list) Player.list[i].draw();
+		for(let i in Laser.list) Laser.list[i].draw();
+	},40);
 
     var drawMap = ()=>{
         let imgMap = Img.terreo;

@@ -40,17 +40,16 @@ app.get("/", (req, res) => {
   res.json({ message: "oi express!" });
 });
 
-var content = ".";
-app.post('/Equipamentos/buzina', (req, res)=>{
-  var response = {
-    buz:Number(req.body.buzina),
-    id:Number(req.body.id)
-  }
+var content = {};
+app.post('/buzina', (req, res)=>{
+    
+    const buz = String(req.body.buzina);
+    const id = String(req.body.id);
+    const content = buz + id;
 
-  if(response.buzina == 1 || response.buzina == 0){
-    content = response;
+  if(buz == "1" || buz == "0"){
+    res.send(content);
   }
-  res.send(JSON.stringify(content));
   console.log(content);
 });
 
@@ -66,7 +65,7 @@ mongoose
   )
   .then(() => {
     console.log("conectamos ao MongoDB!");
-    app.listen(PORT, () => {
+    app.listen(PORT, HOST, () => {
       console.log(`App listening on http://${HOST}:${PORT}/`);
   })
 })

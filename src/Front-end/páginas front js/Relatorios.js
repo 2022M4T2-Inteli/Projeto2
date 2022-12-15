@@ -1,5 +1,5 @@
 const PORT = 5500;
-const hostname = "10.128.64.173";
+const hostname = "10.128.64.20";
 
 const getEletric = async () => {
   const tbodyEle = document.getElementById("tbodyEle");
