@@ -1,23 +1,16 @@
-const getData = [
-    {"ID": "1", "Modelo": "cell", "Localização": "sala"},
-    {"ID": "2", "Modelo": "pc", "Localização": "sala 1"},
-];
-
-
 function generateExcel(){
-    const id = document.getElementsByName("id").length;
+    const id = document.getElementsByClassName("id").length;
 
-    var data = [['IDEletronico','NumeroPatrimonio','NumeroSerie','Modelo','Cor','LocalizacaoX','LocalizacaoY']];
+    var data = [['ID','Nr Patri','Nr Série','Modelo','Cor','Local']];
 
     for(var i=0; i<id; i++){
         var content = [];
-        content.push(String(document.getElementsByName("id")[i].value));
-        content.push(String(document.getElementsByName("nrPatri")[i].value));
-        content.push(String(document.getElementsByName("nrSerie")[i].value));
-        content.push(String(document.getElementsByName("modelo")[i].value));
-        content.push(String(document.getElementsByName("cor")[i].value));
-        content.push(String(document.getElementsByName("locX")[i].value));
-        content.push(String(document.getElementsByName("locY")[i].value));
+        content.push(String(document.getElementsByClassName("id")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("nrPatri")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("nrSerie")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("modelo")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("cor")[i].innerHTML));
+        content.push(String(document.getElementsByClassName("loc")[i].innerHTML));
         data.push(content);
     }
     console.log(data);
@@ -25,6 +18,5 @@ function generateExcel(){
     const wb = XLSX.utils.book_new();
     wb.SheetNames.push("Localização");
     wb.Sheets["Localização"] = ws;
-    XLSX.utils.book_append_sheet(wb, ws, "Localização");
     XLSX.writeFile(wb, 'Relatório do Patrimônio.xlsx');
 }
