@@ -1,5 +1,5 @@
 const PORT = 5500;
-const hostname = "192.168.1.58";
+const HOST = "10.128.64.20";
 
 var currentClass = "Sala-00";
 
@@ -9,11 +9,15 @@ tbodyEle.innerHTML = "";
 
     $.ajax({
         async: true,
-        url: `http://${hostname}:${PORT}/Eletronicos`,
+        url: `http://${HOST}:${PORT}/Eletronicos`,
         type: 'GET',
         success: data => {
             data.forEach(element => {
                 getClass(element.LocalizacaoX, element.LocalizacaoY);
+                const button = `<button type="button" class="btn back_button">
+                                <a class="menu_give_button" id="onoff" value="off"
+                                onclick="Buzinar(${element.IDEletronico})">BUZINA</a></button>`;
+                
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
                 <td class="id">${element.IDEletronico}</td>
@@ -22,6 +26,7 @@ tbodyEle.innerHTML = "";
                 <td class="modelo">${element.Modelo}</td>
                 <td class="cor">${element.Cor}</td>
                 <td class="loc">${currentClass}</td>
+                <td>${button}</td>
                         `
                 tbodyEle.appendChild(tr);
 
@@ -46,4 +51,15 @@ const getClass = (posX, posY) => {
         if(posX >= 0 && posX < 5){ currentClass = "Sala-11"; return; }
         if(posX >= 5 && posX < 10){ currentClass = "Sala-12"; return; }
     }
+}
+
+function Buzinar(id){
+      var currentvalue = document.getElementById('onoff').value;
+      if(currentvalue == "off"){
+        document.getElementById("onoff").value="On";
+        $.post("http://"+HOST+"/buzina/"+id, {buzina:"1"}, ()=>{});
+      }else{
+        document.getElementById("onoff").value="Off";
+        $.post("http://"+HOST+"/buzina/"+id, {buzina:"0"}, ()=>{});
+      }
 }
