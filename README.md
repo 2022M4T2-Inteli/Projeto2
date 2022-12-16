@@ -57,7 +57,9 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 ## 🗃 Histórico de lançamentos
 
 * 0.2.1 - 16/12/2022 
- 
+    * Integração frontend e backend, RFID e FTM;
+    * Finalização das páginas de frontend;
+    * Versões finais de documentação e apresentação;
     
 * 0.2.0 - 02/12/2022 
     * Sistema de varredura de Access-Points a partir do bloco central;
