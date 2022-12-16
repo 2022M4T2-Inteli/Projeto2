@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const HOST = "10.254.17.234"
+const HOST = "192.168.1.58" //"10.128.64.20"
 const PORT = "5500";
 
 // forma de ler JSON / middlewares
@@ -40,16 +40,16 @@ app.get("/", (req, res) => {
   res.json({ message: "oi express!" });
 });
 
-var content = {};
+var content = "";
 app.post('/buzina', (req, res)=>{
     
     const buz = String(req.body.buzina);
     const id = String(req.body.id);
-    const content = buz + id;
 
   if(buz == "1" || buz == "0"){
-    res.send(content);
+    content = buz + id;
   }
+  res.send(content);
   console.log(content);
 });
 

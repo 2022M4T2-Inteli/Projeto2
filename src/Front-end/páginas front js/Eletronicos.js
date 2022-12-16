@@ -1,5 +1,5 @@
 const PORT = 5500;
-const HOST = "10.254.17.234";
+const HOST = "192.168.1.58" //"10.128.64.20";
 
 var currentClass = "Sala-00";
 
