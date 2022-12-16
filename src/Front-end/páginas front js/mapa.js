@@ -1,5 +1,5 @@
 const PORT = 5500;
-const HOST = "10.128.64.20";
+const HOST = "192.168.1.58"; //"10.128.64.20";
 
 const getPositions = () => {
     const ctx = document.getElementById("ctx").getContext("2d");

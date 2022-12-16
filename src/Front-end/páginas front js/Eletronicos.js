@@ -1,5 +1,5 @@
 const PORT = 5500;
-const HOST = "10.128.64.20";
+const HOST = "192.168.1.58" //"10.128.64.20";
 
 var currentClass = "Sala-00";
 
@@ -15,10 +15,10 @@ tbodyEle.innerHTML = "";
             data.forEach(element => {
                 getClass(element.LocalizacaoX, element.LocalizacaoY);
                 const buttonOn = `<button type="button" class="btn back_button">
-                                <a class="menu_give_button" id="${element.IDEletronico}On"
+                                <a class="menu_give_button2" id="${element.IDEletronico}On"
                                 onclick="Buzinar('${element.IDEletronico}On', ${element.IDEletronico})">RASTREAR</a></button>`;
                 const buttonOff = `<button type="button" class="btn back_button">
-                                <a class="menu_give_button" id="${element.IDEletronico}Off"
+                                <a class="menu_give_button2" id="${element.IDEletronico}Off"
                                 onclick="Buzinar('${element.IDEletronico}Off', ${element.IDEletronico})">DESRASTREAR</a></button>`;
                 
                 const tr = document.createElement("tr");
