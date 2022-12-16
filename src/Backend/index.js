@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const HOST = "192.168.1.58" //"10.128.64.20"
+const HOST = "10.128.64.20";
 const PORT = "5500";
 
 // forma de ler JSON / middlewares
